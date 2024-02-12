@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "vitetemplate"
+version = "0.1.0"
+description = "Skeletal structure to build React projects with Tailwind"
+authors = ["Nolan Gregory <65730528+nulzo@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+bruhcolor = "^0.0.63"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
