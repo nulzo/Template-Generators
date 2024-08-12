@@ -1,1 +1,23 @@
-{"name": "poop", "displayName": "poop", "publisher": "nulzo", "author": "nulzo", "description": "Auto generated theme using @nulzo's Theme Builder", "version": "0.0.1", "engines": {"vscode": "^1.70.0"}, "categories": ["Themes"], "contributes": {"themes": [{"label": "poop", "uiTheme": "vs-dark", "path": "./themes/poop-theme.json"}]}}
+{
+    "name": "mango-theme",
+    "displayName": "Mango Theme",
+    "publisher": "Nolan Gregory",
+    "author": "Nolan Gregory",
+    "description": "Auto generated theme using @nulzo's Theme Builder",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.70.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Mango Theme",
+                "uiTheme": "vs",
+                "path": "./themes/nolan-theme.json"
+            }
+        ]
+    }
+}
