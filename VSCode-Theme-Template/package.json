@@ -1,9 +1,9 @@
 {
-    "name": "mango-theme",
-    "displayName": "Mango Theme",
-    "publisher": "Nolan Gregory",
-    "author": "Nolan Gregory",
-    "description": "Auto generated theme using @nulzo's Theme Builder",
+    "name": "autumn-theme",
+    "displayName": "Autumn Theme",
+    "publisher": "nulzo",
+    "author": "nulzo",
+    "description": "An autumn theme, made using using @nulzo's Theme Builder",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.70.0"
@@ -14,9 +14,9 @@
     "contributes": {
         "themes": [
             {
-                "label": "Mango Theme",
-                "uiTheme": "vs",
-                "path": "./themes/nolan-theme.json"
+                "label": "Autumn Theme",
+                "uiTheme": "vs-dark",
+                "path": "./themes/nulzo-theme.json"
             }
         ]
     }
