@@ -1,6 +1,6 @@
 import { theme } from "./theme.js";
-import { color } from "./colors.js";
-import { colors } from "./config.js";
+import { color, colors } from "./colors.js";
+// import { colors } from "./config.js";
 import fs from "fs";
 
 const colorTheme = theme(color, colors);

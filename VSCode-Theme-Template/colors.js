@@ -1,11 +1,11 @@
-const colors = {
-  border: "#5c5c5c",
-  input: "#5c5c5c",
-  ring: "#0827f5",
+export const colors = {
+  border: "#515151",
+  input: "#515151",
+  ring: "#3e51c8",
   background: "#ffffff",
   foreground: "#000000",
   primary: {
-    DEFAULT: "#0827f5",
+    DEFAULT: "#3e51c8",
     foreground: "#FFFFFF",
   },
   secondary: {
@@ -25,7 +25,7 @@ const colors = {
     foreground: "#ecfff5",
   },
   warning: {
-    DEFAULT: "#e29e00",
+    DEFAULT: "#dc9914",
     foreground: "#fff6df",
   },
   muted: {
@@ -55,13 +55,27 @@ const colors = {
     methods: "#6422ff",
   },
   git: {
-    modified: "#0827f5",
+    modified: "#bc3ccd",
     deleted: "#F52D37",
     untracked: "#008878",
     submodule: "#008878",
     conflicts: "#D73D94",
     added: "#05ffb0",
   },
+  markdown: {
+    rawBlock: "#00000050",
+  },
+  json: {
+    zero: "#0827f5",
+    first: "#35e2e2",
+    second: "#ff0000",
+    third: "#00ff00",
+    fourth: "#0000ff",
+    fifth: "#ff00ff",
+    sixth: "#ffff00",
+    seventh: "#00ffff",
+    eighth: "#ffa500",
+  }
 };
 
 const TRANSPARENT = "#0c0b0b00";
@@ -75,8 +89,8 @@ export const color = {
   /**
    * Contrast colors.
    */
-  contrastActiveBorder: colors.border,
-  contrastBorder: colors.border,
+  // contrastActiveBorder: colors.border,
+  // contrastBorder: colors.border,
 
   /**
    * Base Colors.
@@ -95,40 +109,40 @@ export const color = {
   /**
    * Window Border. The theme colors for VS Code window border.
    */
-  "window.activeBorder": colors.primary.DEFAULT,
+  "window.activeBorder": colors.border,
   "window.inactiveBorder": colors.border,
 
   /**
    * Activity Bar is the bar on the far left of the window.
    */
-  "activityBar.activeBackground": "transparent",
-  "activityBar.activeBorder": colors.accent.DEFAULT,
+  "activityBar.activeBackground": TRANSPARENT,
+  "activityBar.activeBorder": colors.primary.DEFAULT,
   "activityBar.activeFocusBorder": colors.primary.DEFAULT,
   "activityBar.background": colors.tertiary.DEFAULT,
   "activityBar.border": colors.border,
-  "activityBar.foreground": colors.accent.DEFAULT,
+  "activityBar.foreground": colors.primary.DEFAULT,
   "activityBar.inactiveForeground": `${colors.foreground}90`,
-  "activityBarBadge.background": colors.accent.DEFAULT,
-  "activityBarBadge.foreground": colors.accent.foreground,
+  "activityBarBadge.background": colors.primary.DEFAULT,
+  "activityBarBadge.foreground": colors.primary.foreground,
 
   /**
    * Editor Colors.
    */
   "editor.background": colors.background,
-  "editor.findMatchBackground": `${colors.accent.DEFAULT}20`,
-  "editor.findMatchHighlightBackground": `${colors.accent.DEFAULT}ca`,
-  "editor.findRangeHighlightBackground": `${colors.accent.DEFAULT}50`,
-  "editor.findMatchBorder": "transparent",
-  "editor.findMatchHighlightBorder": "transparent",
+  "editor.findMatchBackground": `${colors.primary.DEFAULT}20`,
+  "editor.findMatchHighlightBackground": `${colors.primary.DEFAULT}ca`,
+  "editor.findRangeHighlightBackground": `${colors.primary.DEFAULT}50`,
+  "editor.findMatchBorder": TRANSPARENT,
+  "editor.findMatchHighlightBorder": TRANSPARENT,
   "editor.foreground": colors.foreground,
-  "editor.hoverHighlightBackground": "transparent",
+  "editor.hoverHighlightBackground": TRANSPARENT,
   "editor.lineHighlightBackground": `${colors.secondary.DEFAULT}40`,
-  "editor.selectionBackground": `${colors.accent.DEFAULT}20`,
-  "editor.selectionHighlightBackground": `${colors.accent.DEFAULT}30`,
-  "editor.selectionHighlightBorder": "transparent",
-  "editor.wordHighlightTextBackground": `${colors.accent.DEFAULT}50`,
-  "editor.wordHighlightBackground": `${colors.accent.DEFAULT}50`,
-  "editor.wordHighlightStrongBackground": `${colors.accent.DEFAULT}50`,
+  "editor.selectionBackground": `${colors.primary.DEFAULT}20`,
+  "editor.selectionHighlightBackground": `${colors.primary.DEFAULT}30`,
+  "editor.selectionHighlightBorder": TRANSPARENT,
+  "editor.wordHighlightTextBackground": `${colors.primary.DEFAULT}50`,
+  "editor.wordHighlightBackground": `${colors.primary.DEFAULT}50`,
+  "editor.wordHighlightStrongBackground": `${colors.primary.DEFAULT}50`,
   "editor.selectionForeground": colors.foreground,
 
   /**
@@ -148,11 +162,11 @@ export const color = {
    */
   "editorSuggestWidget.background": colors.secondary.DEFAULT,
   "editorSuggestWidget.border": colors.border,
-  "editorSuggestWidget.focusHighlightForeground": colors.accent.DEFAULT,
+  "editorSuggestWidget.focusHighlightForeground": colors.primary.DEFAULT,
   "editorSuggestWidget.foreground": colors.foreground,
   "editorSuggestWidget.highlightForeground": colors.foreground,
-  "editorSuggestWidget.highlightBackground": `${colors.accent.DEFAULT}30`,
-  "editorSuggestWidget.selectedBackground": `${colors.accent.DEFAULT}30`,
+  "editorSuggestWidget.highlightBackground": `${colors.primary.DEFAULT}30`,
+  "editorSuggestWidget.selectedBackground": `${colors.primary.DEFAULT}30`,
   "editorSuggestWidget.selectedForeground": colors.background,
   "editorSuggestWidget.selectedIconForeground": colors.background,
 
@@ -163,7 +177,7 @@ export const color = {
 
   "editorWidget.background": colors.secondary.DEFAULT,
   "editorWidget.foreground": colors.foreground,
-  "editorWidget.resizeBorder": colors.accent.DEFAULT,
+  "editorWidget.resizeBorder": colors.primary.DEFAULT,
   "editorWidget.border": colors.border,
 
   /**
@@ -189,43 +203,44 @@ export const color = {
   "inputOption.activeBackground": colors.background,
   "inputOption.activeBorder": colors.border,
   "inputOption.activeForeground": colors.foreground,
-  "inputOption.hoverBackground": `${colors.accent.DEFAULT}30`,
+  "inputOption.hoverBackground": `${colors.primary.DEFAULT}30`,
   "inputValidation.errorBackground": `${colors.error.DEFAULT}50`,
   "inputValidation.errorBorder": colors.error.DEFAULT,
   "inputValidation.errorForeground": colors.error.DEFAULT,
   "inputValidation.infoBackground": `${colors.primary.DEFAULT}50`,
   "inputValidation.infoBorder": colors.primary.DEFAULT,
   "inputValidation.infoForeground": colors.primary.DEFAULT,
-  "inputValidation.warningBackground": `${colors.warning.DEFAULT}50`,
+  "inputValidation.warningBackground": `${colors.warning.DEFAULT}`,
   "inputValidation.warningBorder": colors.warning.DEFAULT,
 
   /**
    * The keybinding colors.
    */
-  "keybindingLabel.foreground": colors.accent.DEFAULT,
-  "keybindingLabel.border": colors.accent.DEFAULT,
-  "keybindingLabel.bottomBorder": colors.accent.DEFAULT,
+  "keybindingLabel.foreground": colors.primary.DEFAULT,
+  "keybindingLabel.border": colors.primary.DEFAULT,
+  "keybindingLabel.bottomBorder": colors.primary.DEFAULT,
   "keybindingLabel.background": colors.background,
   "keybindingTable.headerBackground": colors.background,
 
   /**
    * The list attributes.
    */
-  "list.activeSelectionBackground": `${colors.accent.DEFAULT}`,
+  "list.activeSelectionBackground": `${colors.primary.DEFAULT}`,
   "list.activeSelectionIconForeground": colors.background,
-  "list.dropBackground": `${colors.accent.DEFAULT}`,
+  "list.dropBackground": `${colors.primary.DEFAULT}`,
   "list.errorForeground": colors.error.DEFAULT,
   "list.highlightForeground": colors.background,
-  "list.hoverBackground": `${colors.accent.DEFAULT}f0`,
-  "list.inactiveSelectionBackground": `${colors.accent.DEFAULT}`,
+  "list.hoverBackground": `${colors.primary.DEFAULT}f0`,
+  "list.inactiveSelectionBackground": `${colors.primary.DEFAULT}`,
   "list.inactiveSelectionForeground": colors.background,
   "list.inactiveSelectionIconForeground": colors.background,
+  "list.warningForeground": colors.warning.DEFAULT,
 
   /**
    * The Tab Colors.
    */
   "tab.activeBackground": `${colors.secondary.DEFAULT}`,
-  "tab.activeBorderTop": colors.accent.DEFAULT,
+  "tab.activeBorderTop": colors.primary.DEFAULT,
   "tab.activeBorder": colors.border,
   "tab.border": colors.border,
   "tab.inactiveBackground": `${colors.secondary.DEFAULT}`,
@@ -284,7 +299,7 @@ export const color = {
   /**
    * Debug Icons Colors.
    */
-  "debugIcon.breakpointForeground": colors.error.DEFAULT,
+  "debugIcon.breakpointForeground": colors.accent.DEFAULT,
   "debugIcon.breakpointDisabledForeground": colors.muted.DEFAULT,
   "debugIcon.breakpointUnverifiedForeground": colors.warning.DEFAULT,
   "debugIcon.breakpointCurrentStackframeForeground": colors.success.DEFAULT,
@@ -294,11 +309,11 @@ export const color = {
    * The terminal colors.
    */
   "terminal.background": `${colors.background}`,
-  "terminal.border": colors.accent.DEFAULT,
-  "terminal.inactiveSelectionBackground": `${colors.accent.DEFAULT}30`,
-  "terminal.selectionBackground": `${colors.accent.DEFAULT}30`,
+  "terminal.border": colors.primary.DEFAULT,
+  "terminal.inactiveSelectionBackground": `${colors.primary.DEFAULT}30`,
+  "terminal.selectionBackground": `${colors.primary.DEFAULT}30`,
   "terminalCursor.background": colors.background,
-  "terminalCursor.foreground": colors.accent.DEFAULT,
+  "terminalCursor.foreground": colors.primary.DEFAULT,
   "terminal.foreground": colors.foreground,
   "terminalStickyScroll.border": colors.border,
 
@@ -319,12 +334,12 @@ export const color = {
    * Widgets.
    */
   "widget.border": colors.border,
-  "widget.shadow": "transparent",
+  "widget.shadow": TRANSPARENT,
 
   "welcomePage.tileBorder": colors.border,
   "welcomePage.background": colors.background,
   "welcomePage.progress.background": colors.muted.DEFAULT,
-  "welcomePage.progress.foreground": colors.accent.DEFAULT,
+  "welcomePage.progress.foreground": colors.primary.DEFAULT,
 
   /**
    * Notebook Colors.
@@ -392,18 +407,18 @@ export const color = {
   "settings.numberInputBorder": colors.border,
 
   // Additional merged properties
-  "badge.background": colors.accent.DEFAULT,
-  "badge.foreground": colors.accent.foreground,
+  "badge.background": colors.primary.DEFAULT,
+  "badge.foreground": colors.primary.foreground,
 
   "banner.background": colors.secondary.DEFAULT,
   "banner.foreground": colors.secondary.foreground,
-  "banner.iconForeground": colors.accent.DEFAULT,
+  "banner.iconForeground": colors.primary.DEFAULT,
 
-  "button.background": colors.accent.DEFAULT,
-  "button.border": 'transparent',
-  "button.foreground": colors.accent.foreground,
-  "button.primaryBorder": colors.accent.foreground,
-  "button.hoverBackground": `${colors.accent.DEFAULT}f0`,
+  "button.background": colors.primary.DEFAULT,
+  "button.border": TRANSPARENT,
+  "button.foreground": colors.primary.foreground,
+  "button.primaryBorder": colors.primary.foreground,
+  "button.hoverBackground": `${colors.primary.DEFAULT}f0`,
   "button.secondaryBackground": colors.tertiary.DEFAULT,
   "button.secondaryBorder": colors.muted.DEFAULT,
   "button.separator": colors.border,
@@ -413,8 +428,8 @@ export const color = {
   "checkbox.background": colors.background,
   "checkbox.foreground": colors.foreground,
   "checkbox.border": colors.border,
-  "checkbox.selectBackground": colors.accent.DEFAULT,
-  "checkbox.selectBorder": colors.accent.DEFAULT,
+  "checkbox.selectBackground": colors.primary.DEFAULT,
+  "checkbox.selectBorder": colors.primary.DEFAULT,
 
   "commandCenter.foreground": colors.foreground,
   "commandCenter.background": colors.background,
@@ -440,7 +455,7 @@ export const color = {
   "editorCursor.foreground": colors.foreground,
 
   "editorGroup.border": colors.border,
-  "editorGroupHeader.border": 'transparent',
+  "editorGroupHeader.border": TRANSPARENT,
   "editorGroupHeader.tabsBackground": colors.secondary.DEFAULT,
   "editorGroupHeader.tabsBorder": colors.border,
 
@@ -456,7 +471,7 @@ export const color = {
   "editorHoverWidget.highlightForeground": colors.foreground,
   "editorHoverWidget.statusBarBackground": colors.secondary.DEFAULT,
 
-  "editorLineNumber.activeForeground": colors.accent.DEFAULT,
+  "editorLineNumber.activeForeground": colors.primary.DEFAULT,
   "editorLineNumber.foreground": `${colors.muted.DEFAULT}50`,
   "editorLineNumber.dimmedForeground": `${colors.muted.DEFAULT}20`,
 
@@ -466,27 +481,27 @@ export const color = {
   "editorMarkerNavigationWarning.background": colors.warning.DEFAULT,
 
   "editorOverviewRuler.background": colors.background,
-  "editorOverviewRuler.border": 'transparent',
+  "editorOverviewRuler.border": TRANSPARENT,
 
   "menu.background": colors.secondary.DEFAULT,
   "menu.border": colors.border,
   "menu.foreground": colors.secondary.foreground,
-  "menu.selectionBackground": `${colors.accent.DEFAULT}`,
+  "menu.selectionBackground": `${colors.primary.DEFAULT}`,
   "menu.separatorBackground": colors.border,
-  "menubar.selectionBackground": `${colors.accent.DEFAULT}30`,
+  "menubar.selectionBackground": `${colors.primary.DEFAULT}30`,
   "menubar.selectionForeground": colors.foreground,
   "menubar.selectionBorder": colors.border,
 
   "minimap.background": colors.background,
-  "minimap.findMatchHighlight": `${colors.accent.DEFAULT}20`,
-  "minimap.selectionHighlight": `${colors.accent.DEFAULT}30`,
+  "minimap.findMatchHighlight": `${colors.primary.DEFAULT}20`,
+  "minimap.selectionHighlight": `${colors.primary.DEFAULT}30`,
   "minimap.errorHighlight": colors.error.DEFAULT,
   "minimap.warningHighlight": colors.warning.DEFAULT,
-  "minimap.selectionOccurrenceHighlight": `${colors.accent.DEFAULT}30`,
+  "minimap.selectionOccurrenceHighlight": `${colors.primary.DEFAULT}30`,
   "minimap.infoHighlight": colors.primary.DEFAULT,
-  "minimapSlider.activeBackground": `${colors.accent.DEFAULT}50`,
-  "minimapSlider.hoverBackground": `${colors.accent.DEFAULT}20`,
-  "minimapSlider.background": `${colors.accent.DEFAULT}10`,
+  "minimapSlider.activeBackground": `${colors.primary.DEFAULT}50`,
+  "minimapSlider.hoverBackground": `${colors.primary.DEFAULT}20`,
+  "minimapSlider.background": `${colors.primary.DEFAULT}10`,
 
   "notificationCenter.border": colors.border,
   "notifications.background": colors.secondary.DEFAULT,
@@ -496,14 +511,14 @@ export const color = {
   "notificationsInfoIcon.foreground": colors.primary.DEFAULT,
   "notificationsWarningIcon.foreground": colors.warning.DEFAULT,
   "notificationToast.border": colors.border,
-  "notificationLink.foreground": colors.accent.DEFAULT,
+  "notificationLink.foreground": colors.primary.DEFAULT,
   "notificationCenterHeader.foreground": colors.secondary.foreground,
   "notificationCenterHeader.background": colors.secondary.DEFAULT,
   "notificationCenter.border": colors.border,
 
   "panel.background": colors.secondary.DEFAULT,
   "panel.border": colors.border,
-  "panelTitle.activeBorder": colors.accent.DEFAULT,
+  "panelTitle.activeBorder": colors.primary.DEFAULT,
   "panelTitle.activeForeground": colors.foreground,
   "panelTitle.inactiveForeground": colors.muted.DEFAULT,
   "panelSectionHeader.border": colors.border,
@@ -511,32 +526,32 @@ export const color = {
 
   "peekView.border": colors.border,
   "peekViewEditor.background": colors.background,
-  "peekViewEditor.matchHighlightBackground": colors.error.DEFAULT,
-  "peekViewEditor.matchHighlightBorder": 'transparent',
+  "peekViewEditor.matchHighlightBackground": colors.primary.DEFAULT,
+  "peekViewEditor.matchHighlightBorder": TRANSPARENT,
   "peekViewEditorGutter.background": colors.background,
   "peekViewEditorStickyScroll.background": colors.muted.DEFAULT,
   "peekViewResult.background": colors.muted.DEFAULT,
   "peekViewResult.fileForeground": colors.foreground,
   "peekViewResult.lineForeground": colors.muted.DEFAULT,
-  "peekViewResult.matchHighlightBackground": colors.error.DEFAULT,
+  "peekViewResult.matchHighlightBackground": colors.primary.DEFAULT,
   "peekViewTitle.background": colors.muted.DEFAULT,
   "peekViewTitleDescription.foreground": colors.muted.DEFAULT,
   "peekViewTitleLabel.foreground": colors.foreground,
 
   "pickerGroup.border": colors.border,
-  "pickerGroup.foreground": colors.accent.DEFAULT,
+  "pickerGroup.foreground": colors.primary.DEFAULT,
 
-  "progressBar.background": colors.accent.DEFAULT,
+  "progressBar.background": colors.primary.DEFAULT,
 
-  "scrollbar.shadow": 'transparent',
+  "scrollbar.shadow": TRANSPARENT,
   "scrollbarSlider.activeBackground": `${colors.foreground}40`,
   "scrollbarSlider.background": `${colors.foreground}10`,
   "scrollbarSlider.hoverBackground": `${colors.foreground}20`,
 
-  "settings.settingsHeaderHoverForeground": `${colors.accent.DEFAULT}`,
+  "settings.settingsHeaderHoverForeground": `${colors.primary.DEFAULT}`,
   "settings.rowHoverBackground": `${colors.muted.DEFAULT}20`,
   "settings.focusedRowBackground": `${colors.muted.DEFAULT}50`,
-  "settings.checkboxForeground": `${colors.accent.DEFAULT}`,
+  "settings.checkboxForeground": `${colors.primary.DEFAULT}`,
 
   "sideBar.background": colors.secondary.DEFAULT,
   "sideBar.border": colors.border,
@@ -544,6 +559,7 @@ export const color = {
   "sideBarSectionHeader.background": colors.secondary.DEFAULT,
   "sideBarSectionHeader.border": colors.border,
   "sideBarTitle.foreground": colors.foreground,
+  "sideBarTitle.background": colors.secondary.DEFAULT,
 
   "sideBarActivityBarTop.border": colors.tertiary.DEFAULT,
   "sideBarSection.border": colors.border,
@@ -552,9 +568,9 @@ export const color = {
   "statusBar.border": colors.border,
   "statusBar.debuggingBackground": colors.tertiary.DEFAULT,
   "statusBar.noFolderBackground": colors.tertiary.DEFAULT,
-  "statusBarItem.hoverBackground": `${colors.accent.DEFAULT}f0`,
+  "statusBarItem.hoverBackground": `${colors.primary.DEFAULT}f0`,
   "statusBarItem.hoverForeground": `${colors.background}`,
-  "statusBarItem.remoteBackground": colors.error.DEFAULT,
+  "statusBarItem.remoteBackground": colors.primary.DEFAULT,
   "statusBar.foreground": colors.foreground,
-  "statusBarItem.remoteHoverForeground": colors.accent.DEFAULT,
+  "statusBarItem.remoteHoverForeground": colors.primary.DEFAULT,
 };

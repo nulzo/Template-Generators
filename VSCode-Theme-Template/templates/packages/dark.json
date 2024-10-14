@@ -1,0 +1,22 @@
+{
+    "name": "__TEMPLATE__",
+    "displayName": "__TEMPLATE__",
+    "description": "__TEMPLATE__",
+    "version": "0.0.1",
+    "engines": {
+      "vscode": "^1.70.0"
+    },
+    "categories": [
+      "Themes"
+    ],
+    "contributes": {
+      "themes": [
+        {
+          "label": "__TEMPLATE__",
+          "uiTheme": "vs-dark",
+          "path": "__TEMPLATE__"
+        }
+      ]
+    }
+  }
+  

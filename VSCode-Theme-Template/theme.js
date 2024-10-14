@@ -1763,7 +1763,7 @@ export const theme = (colors, colorObject) => {
                         "source.json meta.structure.dictionary.json support.type.property-name.json"
                     ],
                     "settings": {
-                        "foreground": "#C792EA"
+                        "foreground": colorObject.json.zero
                     }
                 },
                 {
@@ -1772,7 +1772,7 @@ export const theme = (colors, colorObject) => {
                         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
                     ],
                     "settings": {
-                        "foreground": "#FFCB6B"
+                        "foreground": colorObject.json.first
                     }
                 },
                 {
@@ -1781,7 +1781,7 @@ export const theme = (colors, colorObject) => {
                         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
                     ],
                     "settings": {
-                        "foreground": "#F78C6C"
+                        "foreground": colorObject.json.second
                     }
                 },
                 {
@@ -1790,7 +1790,7 @@ export const theme = (colors, colorObject) => {
                         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
                     ],
                     "settings": {
-                        "foreground": "#FF5370"
+                        "foreground": colorObject.json.third
                     }
                 },
                 {
@@ -1799,7 +1799,7 @@ export const theme = (colors, colorObject) => {
                         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
                     ],
                     "settings": {
-                        "foreground": "#C17E70"
+                        "foreground": colorObject.json.fourth
                     }
                 },
                 {
@@ -1808,7 +1808,7 @@ export const theme = (colors, colorObject) => {
                         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
                     ],
                     "settings": {
-                        "foreground": "#82AAFF"
+                        "foreground": colorObject.json.fifth
                     }
                 },
                 {
@@ -1817,7 +1817,7 @@ export const theme = (colors, colorObject) => {
                         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
                     ],
                     "settings": {
-                        "foreground": "#f07178"
+                        "foreground": colorObject.json.sixth
                     }
                 },
                 {
@@ -1826,7 +1826,7 @@ export const theme = (colors, colorObject) => {
                         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
                     ],
                     "settings": {
-                        "foreground": "#C792EA"
+                        "foreground": colorObject.json.seventh
                     }
                 },
                 {
@@ -1835,7 +1835,7 @@ export const theme = (colors, colorObject) => {
                         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
                     ],
                     "settings": {
-                        "foreground": "#C3E88D"
+                        "foreground": colorObject.json.eighth
                     }
                 },
                 {
@@ -1845,7 +1845,7 @@ export const theme = (colors, colorObject) => {
                         "punctuation.definition.list_item.markdown"
                     ],
                     "settings": {
-                        "foreground": "#EEFFFF"
+                        "foreground": colorObject.foreground
                     }
                 },
                 {
@@ -1854,7 +1854,7 @@ export const theme = (colors, colorObject) => {
                         "text.html.markdown markup.inline.raw.markdown"
                     ],
                     "settings": {
-                        "foreground": "#C792EA"
+                        "foreground": colorObject.syntax.strings
                     }
                 },
                 {
@@ -1863,7 +1863,7 @@ export const theme = (colors, colorObject) => {
                         "text.html.markdown markup.inline.raw.markdown punctuation.definition.raw.markdown"
                     ],
                     "settings": {
-                        "foreground": "#65737E"
+                        "foreground": colorObject.syntax.strings
                     }
                 },
                 {
@@ -1874,7 +1874,7 @@ export const theme = (colors, colorObject) => {
                         "markup.heading.markdown punctuation.definition.heading.markdown"
                     ],
                     "settings": {
-                        "foreground": "#C3E88D"
+                        "foreground": colorObject.primary.DEFAULT
                     }
                 },
                 {
@@ -1884,7 +1884,7 @@ export const theme = (colors, colorObject) => {
                     ],
                     "settings": {
                         "fontStyle": "italic",
-                        "foreground": "#f07178"
+                        "foreground": colorObject.syntax.methods
                     }
                 },
                 {
@@ -1895,7 +1895,7 @@ export const theme = (colors, colorObject) => {
                     ],
                     "settings": {
                         "fontStyle": "bold",
-                        "foreground": "#f07178"
+                        "foreground": colorObject.syntax.strings
                     }
                 },
                 {
@@ -1910,7 +1910,7 @@ export const theme = (colors, colorObject) => {
                     ],
                     "settings": {
                         "fontStyle": "bold",
-                        "foreground": "#f07178"
+                        "foreground": colorObject.syntax.strings
                     }
                 },
                 {
@@ -1920,7 +1920,7 @@ export const theme = (colors, colorObject) => {
                     ],
                     "settings": {
                         "fontStyle": "underline",
-                        "foreground": "#F78C6C"
+                        "foreground": colorObject.syntax.strings
                     }
                 },
                 {
@@ -1929,7 +1929,7 @@ export const theme = (colors, colorObject) => {
                         "markup.quote punctuation.definition.blockquote.markdown"
                     ],
                     "settings": {
-                        "foreground": "#65737E"
+                        "foreground": colorObject.muted.DEFAULT
                     }
                 },
                 {
@@ -1947,7 +1947,7 @@ export const theme = (colors, colorObject) => {
                         "string.other.link.title.markdown"
                     ],
                     "settings": {
-                        "foreground": "#82AAFF"
+                        "foreground": colorObject.primary.DEFAULT
                     }
                 },
                 {
@@ -1956,7 +1956,7 @@ export const theme = (colors, colorObject) => {
                         "string.other.link.description.title.markdown"
                     ],
                     "settings": {
-                        "foreground": "#C792EA"
+                        "foreground": colorObject.foreground
                     }
                 },
                 {
@@ -1965,7 +1965,7 @@ export const theme = (colors, colorObject) => {
                         "constant.other.reference.link.markdown"
                     ],
                     "settings": {
-                        "foreground": "#FFCB6B"
+                        "foreground": colorObject.primary.DEFAULT
                     }
                 },
                 {
@@ -1974,7 +1974,7 @@ export const theme = (colors, colorObject) => {
                         "markup.raw.block"
                     ],
                     "settings": {
-                        "foreground": "#C792EA"
+                        "foreground": colorObject.syntax.strings
                     }
                 },
                 {
@@ -1983,7 +1983,7 @@ export const theme = (colors, colorObject) => {
                         "markup.raw.block.fenced.markdown"
                     ],
                     "settings": {
-                        "foreground": "#00000050"
+                        "foreground":  `${colors.foreground}50`,
                     }
                 },
                 {
@@ -1992,7 +1992,7 @@ export const theme = (colors, colorObject) => {
                         "punctuation.definition.fenced.markdown"
                     ],
                     "settings": {
-                        "foreground": "#00000050"
+                        "foreground": `${colors.foreground}50`,
                     }
                 },
                 {
@@ -2003,7 +2003,7 @@ export const theme = (colors, colorObject) => {
                         "punctuation.section.class.end"
                     ],
                     "settings": {
-                        "foreground": "#EEFFFF"
+                        "foreground": colorObject.foreground
                     }
                 },
                 {
@@ -2012,7 +2012,7 @@ export const theme = (colors, colorObject) => {
                         "variable.language.fenced.markdown"
                     ],
                     "settings": {
-                        "foreground": "#65737E"
+                        "foreground": colorObject.muted.DEFAULT
                     }
                 },
                 {
@@ -2022,7 +2022,7 @@ export const theme = (colors, colorObject) => {
                     ],
                     "settings": {
                         "fontStyle": "bold",
-                        "foreground": "#65737E"
+                        "foreground": colorObject.border
                     }
                 },
                 {
@@ -2031,7 +2031,7 @@ export const theme = (colors, colorObject) => {
                         "markup.table"
                     ],
                     "settings": {
-                        "foreground": "#EEFFFF"
+                        "foreground": colorObject.foreground
                     }
                 }
             ]
