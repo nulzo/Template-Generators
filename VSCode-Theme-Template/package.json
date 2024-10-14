@@ -5,6 +5,7 @@
     "author": "nulzo",
     "description": "An autumn theme, made using using @nulzo's Theme Builder",
     "version": "0.0.1",
+    "type": "module",
     "engines": {
         "vscode": "^1.70.0"
     },
@@ -15,7 +16,7 @@
         "themes": [
             {
                 "label": "Autumn Theme",
-                "uiTheme": "vs-dark",
+                "uiTheme": "vs",
                 "path": "./themes/nulzo-theme.json"
             }
         ]

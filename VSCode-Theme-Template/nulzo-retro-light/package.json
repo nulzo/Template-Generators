@@ -1,0 +1,22 @@
+{
+  "name": "nulzo-retro-light",
+  "displayName": "nulzo-retro-light",
+  "description": "Light theme designed around Windows 95.",
+  "version": "0.0.3",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "publisher": "nulzo",
+  "contributes": {
+    "themes": [
+      {
+        "label": "@nulzo [Retro Light]",
+        "uiTheme": "vs",
+        "path": "./themes/@nulzo [Retro Light]-color-theme.json"
+      }
+    ]
+  }
+}

@@ -55,11 +55,11 @@ const colorObject = {
    * being used on the default background colors.
    */
   foreground: {
-    primary: "#fff7f4",
-    secondary: "#b1b1b1",
-    tertiary: "#444444",
+    primary: "#000000",
+    secondary: "#000000",
+    tertiary: "#000000",
     accent: "#FDF3E9",
-    muted: "#25201f",
+    muted: "#979797",
     inactive: "#999999",
     info: "#AED5F4",
     error: "#f69ba5",
@@ -67,10 +67,10 @@ const colorObject = {
     success: "#B5DFC9",
   },
   background: {
-    primary: "#070707",
-    secondary: "#0c0c0c",
-    tertiary: "#242222",
-    accent: "#ffcba8",
+    primary: "#ffffff",
+    secondary: "#c3c3c3",
+    tertiary: "#818181",
+    accent: "#0827f5",
     muted: "#adadad",
     inactive: "#2e2e2e",
     info: "#2196F3",
@@ -79,28 +79,30 @@ const colorObject = {
     success: "#30AF6B",
   },
   syntax: {
-    constants: "#f5db94",
-    keywords: "#ff9891",
-    functions: "#d7b967",
-    strings: "#d2ecb1",
-    variables: "#ffc1ae",
-    typehints: "#d4c8b6",
-    numbers: "#ffa285",
-    methods: "#ffa958",
+    constants: "#5372ff",
+    keywords: "#009196",
+    functions: "#ff0000",
+    strings: "#0827f5",
+    variables: "#141414",
+    typehints: "#141414",
+    numbers: "#ff3e9f",
+    methods: "#6422ff",
   },
   git: {
-    modified: "#848AD9",
+    modified: "#0827f5",
     deleted: "#F52D37",
-    untracked: "#93D1CA",
-    submodule: "#8DB9E2",
+    untracked: "#008878",
+    submodule: "#008878",
     conflicts: "#D73D94",
-    added: "#78F5CD",
+    added: "#05ffb0",
   },
   misc: {
     hover: "",
     selected: "",
     highlight: "#a39483",
-    border: "#41403e",
+    border: "#5c5c5c",
+    border_dark: "#383838",
+    border_light: "#b1b1b1",
   },
 };
 
@@ -143,9 +145,9 @@ let colors = {
   "activityBar.activeBorder": colorObject.background.accent,
   "activityBar.activeFocusBorder": colorObject.background.primary,
   "activityBar.background": colorObject.background.tertiary,
-  "activityBar.border": colorObject.misc.border,
+  "activityBar.border": colorObject.misc.border_dark,
   "activityBar.foreground": colorObject.background.accent,
-  "activityBar.inactiveForeground": colorObject.foreground.inactive,
+  "activityBar.inactiveForeground": `${colorObject.foreground.primary}90`,
   "activityBarBadge.background": colorObject.background.accent,
   "activityBarBadge.foreground": colorObject.foreground.accent,
 
@@ -178,14 +180,15 @@ let colors = {
    * perform an action when clicked. They can have text or icons.
    */
   "button.background": colorObject.background.accent,
-  "button.border": colorObject.background.accent,
+  "button.border": TRANSPARENT,
   "button.foreground": colorObject.foreground.accent,
-  "button.hoverBackground": `${colorObject.background.accent}90`,
-  "button.secondaryBackground": colorObject.background.muted,
+  "button.primaryBorder": colorObject.foreground.accent,
+  "button.hoverBackground": `${colorObject.background.accent}f0`,
+  "button.secondaryBackground": colorObject.background.tertiary,
   "button.secondaryBorder": colorObject.background.muted,
   "button.separator": colorObject.misc.border,
-  "button.secondaryForeground": colorObject.foreground.muted,
-  "button.secondaryHoverBackground": `${colorObject.background.muted}90`,
+  "button.secondaryForeground": colorObject.foreground.primary,
+  "button.secondaryHoverBackground": `${colorObject.background.muted}f0`,
 
   /**
    * Checkboxes are interactive elements that can be toggled on or off.
@@ -211,6 +214,9 @@ let colors = {
   "commandCenter.inactiveBorder": colorObject.misc.border,
   "commandCenter.activeBorder": colorObject.misc.border,
 
+  "dropdown.background": colorObject.background.primary,
+  "dropdown.listBackground": colorObject.background.secondary,
+
   /**
    * Debugging Colors
    * - Debug Toolbar - The toolbar that appears at the top of the editor
@@ -218,6 +224,9 @@ let colors = {
    *     pausing, and stopping the debugger.
    *
    */
+  "toolbar.hoverBackground": colorObject.background.muted,
+  "toolbar.activeBackground": colorObject.background.muted,
+  "editorActionList.foreground": colorObject.foreground.primary,
   "debugToolBar.background": colorObject.background.secondary,
   "debugToolBar.border": colorObject.misc.border,
 
@@ -260,7 +269,7 @@ let colors = {
   "editor.foreground": colorObject.foreground.primary,
   "editor.hoverHighlightBackground": TRANSPARENT,
   "editor.lineHighlightBackground": `${colorObject.background.secondary}40`,
-  "editor.selectionBackground": `${colorObject.background.accent}50`,
+  "editor.selectionBackground": `${colorObject.background.accent}20`,
   "editor.selectionHighlightBackground": `${colorObject.background.accent}30`,
   "editor.selectionHighlightBorder": TRANSPARENT,
   "editor.findMatchHighlightBackground": `${colorObject.background.accent}50`,
@@ -292,7 +301,7 @@ let colors = {
 
   "editorGroup.border": colorObject.misc.border,
   "editorGroupHeader.border": TRANSPARENT,
-  "editorGroupHeader.tabsBackground": colorObject.background.primary,
+  "editorGroupHeader.tabsBackground": colorObject.background.secondary,
   "editorGroupHeader.tabsBorder": colorObject.misc.border,
 
   /**
@@ -421,21 +430,22 @@ let colors = {
    * An active list/tree has keyboard focus, an inactive does not.
    * This is mainly used in the left sidebar file tree.
    */
-  "list.activeSelectionBackground": `${colorObject.background.accent}30`,
+  "list.activeSelectionBackground": `${colorObject.background.accent}`,
   "list.activeSelectionIconForeground": colorObject.background.primary,
-  "list.dropBackground": `${colorObject.background.accent}30`,
+  "list.dropBackground": `${colorObject.background.accent}`,
   "list.errorForeground": colorObject.background.error,
-  "list.highlightForeground": colorObject.background.secondary,
-  "list.hoverBackground": `${colorObject.background.accent}30`,
-  "list.inactiveSelectionBackground": `${colorObject.background.accent}30`,
+  "list.highlightForeground": colorObject.background.primary,
+  "list.hoverBackground": `${colorObject.background.accent}f0`,
+  "list.inactiveSelectionBackground": `${colorObject.background.accent}`,
   "list.inactiveSelectionForeground": colorObject.background.primary,
   "list.inactiveSelectionIconForeground": colorObject.background.primary,
   "list.warning": colorObject.background.warning,
   "listFilterWidget.background": colorObject.background.primary,
   "listFilterWidget.noMatchesOutline": colorObject.background.error,
   "listFilterWidget.outline": colorObject.background.error,
-  "list.activeSelectionIconForeground": colorObject.background.accent,
-  "list.focusForeground": colorObject.background.accent,
+  "list.activeSelectionIconForeground": colorObject.background.primary,
+  "list.focusForeground": colorObject.background.primary,
+  "list.hoverForeground": `${colorObject.background.primary}`,
 
   /**
    * The menu is the dropdown menu that appears when clicking on a
@@ -446,7 +456,7 @@ let colors = {
   "menu.background": colorObject.background.secondary,
   "menu.border": colorObject.misc.border,
   "menu.foreground": colorObject.foreground.secondary,
-  "menu.selectionBackground": `${colorObject.background.accent}30`,
+  "menu.selectionBackground": `${colorObject.background.accent}`,
   "menu.separatorBackground": colorObject.misc.border,
   "menubar.selectionBackground": `${colorObject.background.accent}30`,
   "menubar.selectionForeground": colorObject.foreground.primary,
@@ -484,16 +494,20 @@ let colors = {
   "notificationLink.foreground": colorObject.background.accent,
   "notificationCenterHeader.foreground": colorObject.foreground.secondary,
   "notificationCenterHeader.background": colorObject.background.secondary,
+  "notificationCenter.border": colorObject.misc.border,
 
   /**
    * The panel is shown below the editor area and contain views
    * like Output and Integrated Terminal.
    */
-  "panel.background": colorObject.background.primary,
+  // FIX TO PRIMARY
+  "panel.background": colorObject.background.secondary,
   "panel.border": colorObject.misc.border,
   "panelTitle.activeBorder": colorObject.background.accent,
   "panelTitle.activeForeground": colorObject.foreground.primary,
   "panelTitle.inactiveForeground": colorObject.foreground.inactive,
+  "panelSectionHeader.border": colorObject.misc.border,
+  "panelSection.border": colorObject.misc.border,
 
   /**
    * Peek views are used to show references and declarations as a view inside the editor.
@@ -523,9 +537,9 @@ let colors = {
    * for visibility.
    */
   "scrollbar.shadow": TRANSPARENT,
-  "scrollbarSlider.activeBackground": `${colorObject.background.accent}40`,
-  "scrollbarSlider.background": `${colorObject.background.accent}10`,
-  "scrollbarSlider.hoverBackground": `${colorObject.background.accent}20`,
+  "scrollbarSlider.activeBackground": `${colorObject.foreground.primary}40`,
+  "scrollbarSlider.background": `${colorObject.foreground.primary}10`,
+  "scrollbarSlider.hoverBackground": `${colorObject.foreground.primary}20`,
 
   "selection.background": `${colorObject.background.accent}30`,
 
@@ -534,10 +548,14 @@ let colors = {
    * used to customize the editor to the user's preferences. The
    * settings are accessible via the control panel.
    */
-  "settings.headerForeground": colorObject.foreground.primary,
+  "settings.headerForeground": colorObject.background.accent,
   "settings.modifiedItemIndicator": colorObject.background.accent,
   "settings.dropdownBorder": colorObject.misc.border,
-  "settings.settingsHeaderHoverForeground": `${colorObject.background.accent}20`,
+  "settings.dropdownBackground": colorObject.background.primary,
+  "settings.settingsHeaderHoverForeground": `${colorObject.background.accent}`,
+  "settings.rowHoverBackground": `${colorObject.background.muted}20`,
+  "settings.focusedRowBackground": `${colorObject.background.muted}50`,
+  "settings.checkboxForeground": `${colorObject.background.accent}`,
 
   /**
    * Side Bar Colors. The side bar is the vertical bar on the left side
@@ -547,64 +565,74 @@ let colors = {
   "sideBar.border": colorObject.misc.border,
   "sideBar.foreground": colorObject.foreground.primary,
   "sideBarSectionHeader.background": colorObject.background.secondary,
-  "sideBarSectionHeader.border": colorObject.misc.border,
-  "sideBarTitle.foreground": colorObject.foreground.inactive,
+  "sideBarSectionHeader.border": colorObject.misc.border_dark,
+  "sideBarTitle.foreground": colorObject.foreground.primary,
+
+  "sideBarActivityBarTop.border": colorObject.background.tertiary,
+  "sideBarSection.border": colorObject.misc.border_dark,
 
   /**
    * The Status Bar is shown in the bottom of the workbench. It contains things
    * like the language mode, line and column number, and the git status.
    */
   "statusBar.background": colorObject.background.tertiary,
-  "statusBar.border": colorObject.misc.border,
+  "statusBar.border": colorObject.misc.border_dark,
   "statusBar.debuggingBackground": colorObject.background.tertiary,
   "statusBar.noFolderBackground": colorObject.background.tertiary,
-  "statusBarItem.hoverBackground": `${colorObject.background.accent}30`,
+  "statusBarItem.hoverBackground": `${colorObject.background.accent}f0`,
+  "statusBarItem.hoverForeground": `${colorObject.background.primary}`,
   "statusBarItem.remoteBackground": colorObject.background.error,
   "statusBar.foreground": colorObject.foreground.primary,
+  "statusBarItem.remoteHoverForeground": colorObject.background.accent,
 
   /**
    * The Tab Colors. The tabs are the tabs at the top of the editor that
    * show the open files. They can be clicked to switch between files.
    * The tab is the container for the editor.
    */
-  "tab.activeBackground": colorObject.background.primary,
+  // FIX 
+  "tab.activeBackground": `${colorObject.background.secondary}`,
   "tab.activeBorderTop": colorObject.background.accent,
+  "tab.activeBorder": colorObject.misc.border_dark,
   "tab.border": colorObject.misc.border,
-  "tab.inactiveBackground": colorObject.background.primary,
-  "tab.selectedForeground": colorObject.foreground.primary,
-  "tab.activeForeground": colorObject.foreground.primary,
-  "tab.inactiveForeground": colorObject.foreground.primary,
+  "tab.inactiveBackground": `${colorObject.background.secondary}`,
+  "tab.selectedForeground": `${colorObject.foreground.secondary}`,
+  "tab.activeForeground": `${colorObject.foreground.secondary}`,
+  "tab.inactiveForeground": `${colorObject.foreground.secondary}`,
 
   /**
    * The terminal is the command line interface for the editor. It is used
    * to run commands and scripts, and it can be used to interact with the
    * editor and the file system.
    */
-  "terminal.background": colorObject.background.primary,
-  "terminal.border": colorObject.misc.border,
+  "terminal.background": `${colorObject.background.primary}`,
+  "terminal.border": colorObject.background.accent,
   "terminal.inactiveSelectionBackground": `${colorObject.background.accent}30`,
-  "terminal.selectionBackground": colorObject.background.error,
+  "terminal.selectionBackground": `${colorObject.background.accent}30`,
   "terminalCursor.background": colorObject.background.primary,
-  "terminalCursor.foreground": colorObject.foreground.primary,
-
+  "terminalCursor.foreground": colorObject.background.accent,
   "textLink.activeForeground": colorObject.background.accent,
   "textLink.foreground": colorObject.foreground.primary,
+  "terminalStickyScroll.border": colorObject.misc.border,
+  "terminal.foreground": colorObject.foreground.primary,
+
+  "inputOption.activeBorder": colorObject.background.accent,
 
   /**
    * Title Bar Colors. The title bar is the bar at the top of the window
    * that contains the title of the window and the minimize, maximize, and
    * close buttons.
    */
-  "titleBar.activeBackground": colorObject.background.tertiary,
+  "titleBar.activeBackground": `${colorObject.background.tertiary}`,
   "titleBar.activeForeground": colorObject.foreground.primary,
-  "titleBar.border": colorObject.misc.border,
-  "titleBar.inactiveBackground": colorObject.background.tertiary,
+  "titleBar.border": colorObject.misc.border_dark,
+  "titleBar.inactiveBackground": `${colorObject.background.tertiary}`,
 
   /**
    * The tree indent guide strokes are used in the file tree to show cascading
    * rulers for directory contents.
    */
-  "tree.indentGuidesStroke": colorObject.foreground.muted,
+  "tree.indentGuidesStroke": `${colorObject.foreground.muted}`,
 
   /**
    * Widgets are elements such as Find/Replace inside the editor.
