@@ -294,14 +294,14 @@
             "themes": [
                 {
                     "label": "Lavender Theme",
-                    "uiTheme": "vs",
+                    "uiTheme": "vs-dark",
                     "path": "./themes/nulzo-theme.json"
                 }
             ]
         }
     },
     "semanticHighlighting": true,
-    "type": "light",
+    "type": "dark",
     "semanticTokenColors": {
         "enumMember": {
             "foreground": "#5372ff"

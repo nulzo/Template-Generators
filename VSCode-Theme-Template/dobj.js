@@ -1,4 +1,4 @@
-const fs = require("fs");
+import fs from "fs";
 
 const TRANSPARENT = "#00000000";
 const AUTHOR = "Nolan Gregory";
@@ -106,7 +106,7 @@ const colorObject = {
   },
 };
 
-const package = {
+const pkg = {
   name: NAME,
   displayName: NAME,
   publisher: AUTHOR,
@@ -133,7 +133,7 @@ const package = {
  * The documentation for this service can be found at
  * `https://code.visualstudio.com/api/references/theme-color`
  */
-let colors = {
+export let colors = {
   /**
    * Activity Bar is the bar on the far left of the window. It contains
    * icons for each of the views in the sidebar. These icons include
@@ -651,7 +651,7 @@ let colors = {
 const theme = {
     "name": NAME,
     "colors": colors,
-    "package": package,
+    "package": pkg,
     "semanticHighlighting": true,
     "type": TYPE,
     "semanticTokenColors": {
